@@ -1,5 +1,4 @@
 # Cinema Booking API
-- 
 - .NET 8 SDK
 - SQLite
 
