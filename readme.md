@@ -1,5 +1,4 @@
 # Cinema Booking API
-- 
 - .NET 8 SDK
 - SQLite
 
@@ -50,7 +49,7 @@ Authorization: Bearer your-jwt-token
 
 
 ## Notes
-- Only **admin users** can access admin endpoints. Set `role: "admin"` during registration.
+- Only **admin users** can access admin endpoints. Set `IsAdmin : true` during registration.
 - The database is **not included** in this repository. Run migrations to set up a fresh SQLite database.
 - Uploaded images are stored in the `/uploads` folder, which is publicly accessible.
 
