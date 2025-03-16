@@ -1,10 +1,14 @@
 using System.Reflection;
 using System.Text;
 using CinemaApp.Application.Abstractions.Auth;
+using CinemaApp.Application.Commands.LoginUserCommand;
+using CinemaApp.Application.Commands.RegisterUser;
+using CinemaApp.Application.Validations;
 using CinemaApp.Domain.Repositories;
 using CinemaApp.Infra.DatabaseContexts;
 using CinemaApp.Infra.Repositories;
 using CinemaApp.Infra.Services;
+using FluentValidation;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -48,6 +52,9 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+builder.Services.AddTransient<IValidator<RegisterUserCommand>, RegisterUserValidator>();
+builder.Services.AddTransient<IValidator<LoginUserCommand>, LoginUserValidator>();
+
 
 // Add DbContext with SQLite
 builder.Services.AddDbContext<AppDbContext>(options =>
