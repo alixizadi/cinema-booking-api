@@ -1,0 +1,58 @@
+# Ignore SQLite database files
+*.db
+*.db-shm
+*.db-wal
+
+# Ignore uploaded images and media files
+/uploads/*
+!uploads/.gitkeep
+
+# Ignore build artifacts
+bin/
+obj/
+
+# Ignore user-specific and IDE files
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore log files
+logs/
+*.log
+
+# Ignore environment files
+.env
+
+# Ignore compiled files
+*.dll
+*.exe
+*.pdb
+*.cache
+
+# Ignore NuGet dependencies
+*.nupkg
+packages/
+
+# Ignore Docker-related files
+.dockerignore
+**/Dockerfile
+**/docker-compose.*
+
+# Ignore Rider and JetBrains IDE files
+.idea/
+*.iml
+
+# Ignore test result files
+TestResults/
+
+# Ignore published outputs
+publish/
+
+# Ignore Swagger generated files
+swagger/
+
+# Ignore any sensitive local files
+secrets.json
+
